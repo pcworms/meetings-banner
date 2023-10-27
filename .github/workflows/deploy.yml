@@ -17,7 +17,7 @@ jobs:
         with:
           # Input template file path. You must specify either a template file or a template string.
           template-file: 'template/template.mustache'
-          glob: 'data.json'
+          vars: 'data.json'
           output-file: 'template/index.html'
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
