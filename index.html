@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دورهمی های کرم های کامپیوتر</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&family=Vazirmatn:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Oct 27, 2023 19:00:00").getTime();
+        var finishDate = countDownDate + (1.5 * 3600 * 1000);
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+            console.log(finishDate)
+
+            if (now > finishDate) {
+                document.getElementById("counter").innerHTML = "خاتمه یافت";
+                document.getElementById("link").innerHTML = "لینک جلسه هم در گروه های ما در تلگرام و ماتریکس اعلام شده بود!";
+            } else if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("counter").innerHTML = "در حال برگزاری ...";
+                document.getElementById("link").innerHTML = "لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام شده";
+            } else {
+                // Time calculations for days, hours, minutes and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="demo"
+                var res = days > 0 ? days + " روز" : "";
+                res += days > 0 && hours > 0 ? " و " : ""
+                res += hours > 0 ? hours + " ساعت" : "";
+                res += hours > 0 && minutes > 0 ? " و " : ""
+                res += minutes > 0 ? minutes + " دقیقه" : "";
+                res += minutes > 0 && seconds > 0 ? " و " : ""
+                res += seconds > 0 ? seconds + " ثانیه" : "";
+                res += " دیگر"
+                const regex = /\d/g
+                let nums = '۰۱۲۳۴۵۶۷۸۹';
+                res = res.replace(regex, function (d) {
+                    return nums[d]
+                }
+                )
+                document.getElementById("counter").innerHTML = res;
+            }
+
+
+        }, 1000);
+    </script>
+</head>
+
+<body class="text-light">
+    <div class="container-fluid">
+        <div class="row mt-2 text-center">
+            <div class="col d-flex  align-items-center justify-content-center">
+                <span class="big-text d-inline-block">#3</span>
+                <img src="./assert/meeting-logo.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+                <h1 class="fs-1">دورهمی های کرم‌های کامپیوتر</h1>
+                <small>هر جمعه ساعت ۱۹</small>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-8 p-2 subject-bg"">
+                <div class=" row align-items-center">
+                <div class="col-2 float-start text-center"><img src="./assert/speaker.jpg" class="profile"></div>
+                <div class="col">
+                    <small class="speaker d-block">
+                        این هفته با «فاروق کریمی‌زاده» درباره:
+                    </small>
+                    <h2 class="subject">سخت‌افزار های آزاد</h2>
+                    <div class="text-center">
+                        <small class="time" id="counter">
+                            ۳ روز و ۲ ساعت و ۱۳ دقیقه‌ی دیگر
+                        </small>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <small id="link">
+                لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام خواهد شد
+            </small>
+        </div>
+    </div>
+</body>
+
+</html>

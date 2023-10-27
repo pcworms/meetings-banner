@@ -1,0 +1,59 @@
+html{
+    min-height: 100%;
+    padding: 0;
+    font-size: 1.7rem;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+h1{
+    font-weight: bold !important;
+}
+h2{
+    margin: .5rem 0 0 0 !important
+}
+
+body{
+    min-width: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #000d12 !important;
+    background-image: url('./assert/bg-pattern.png') !important;
+    background-repeat: repeat !important;
+    background-position: top center !important;
+    background-attachment: fixed !important;
+    background-size: 18%;
+    color:white;
+}
+
+.big-text{
+    font-size: 370px;
+    line-height: 370px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-weight: bold;
+}
+
+.subject-bg{
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+
+.profile{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+small{
+    font-size: .6rem !important;
+    line-height: .6rem !important;
+}
+
+.time{
+    position: relative;
+    right: calc(-60px - .25rem);
+    top: .5rem
+}
