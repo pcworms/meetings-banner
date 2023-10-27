@@ -10,12 +10,11 @@ jobs:
   create_API_docs:
     runs-on: ubuntu-latest
     steps:
+      - name: check working dir
+        run: pwd
       - name: Render template
-        # You may pin to the exact commit or the version.
-        # uses: recih/template-render-action@e9d7eeb6cbcb45411b658bd7a5fe96f8eb253bca
         uses: recih/template-render-action@v1.0.2
         with:
-          # Input template file path. You must specify either a template file or a template string.
           template-file: template/template.mustache
           vars: data.json
           output-file: template/index.html
