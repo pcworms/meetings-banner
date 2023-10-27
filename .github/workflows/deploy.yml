@@ -10,11 +10,14 @@ jobs:
   create_index_page:
     runs-on: ubuntu-latest
     steps:
-      - name: render
-        uses: actions/setup-node@v3
-      - run: npm i -g mustache
-      - run: ls -la
-      - run: npx mustache data.json template/template.mustache template/index.html
+      - uses: actions/checkout@v3
+      - name: Render template
+        uses: recih/template-render-action@v1.0.2
+        with:
+          template-file: template/template.mustache
+          vars: data.json
+          output-file: template/index.html
+          engine: mustache
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
