@@ -13,7 +13,8 @@ jobs:
       - name: render
         uses: actions/setup-node@v3
       - run: npm i -g mustache
-      - run: npx mustache data.json template/template.mustache test.html
+      - run: ls -la
+      - run: npx mustache data.json template/template.mustache template/index.html
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
