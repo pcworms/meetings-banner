@@ -16,9 +16,10 @@ jobs:
         uses: recih/template-render-action@v1.0.2
         with:
           # Input template file path. You must specify either a template file or a template string.
-          template-file: 'template/template.mustache'
-          vars: 'data.json'
-          output-file: 'template/index.html'
+          template-file: template/template.mustache
+          vars: data.json
+          output-file: template/index.html
+          engine: mustache
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
