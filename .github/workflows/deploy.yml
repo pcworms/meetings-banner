@@ -22,7 +22,7 @@ jobs:
       - name: Install pageres
         run: npm install --global pageres-cli
       - name: create social media preview
-        run: pageres template/index.html 800x800 --filename='tempalte/preview.jpg' --hide='#counter' --overwrite
+        run: pageres template/index.html 800x800 --filename='template/preview' --hide='#counter' --overwrite
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
