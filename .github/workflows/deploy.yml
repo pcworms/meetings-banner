@@ -11,6 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
       - name: Render template
         uses: recih/template-render-action@v1.0.2
         with:
@@ -18,6 +19,10 @@ jobs:
           vars: data.json
           output-file: template/index.html
           engine: mustache
+      - name: Install pageres
+        run: npm install --global pageres-cli
+      - name: create social media preview
+        run: pageres template/index.html 800x800 --filename='tempalte/preview.jpg' --hide='#counter' --overwrite
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
