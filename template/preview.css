@@ -8,3 +8,7 @@ html, body{
     top: 50%;
     transform: translateY(50%);
 }
+
+.profile{
+    width: 200px;
+}
