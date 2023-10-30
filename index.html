@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="#4 - دورهمی کرم‌های کامپیوتر" />
-    <meta name="og:description" content="دورهمی های کرم‌های کامپیوتر - جمعه هر هفته ساعت هفت این هفته با ارائه «بهنام سیم‌جو» درباره توصیه‌هایی برای برنامه‌نویسیان تازه‌وارد">
+    <meta name="og:description"
+        content="دورهمی های کرم‌های کامپیوتر - جمعه هر هفته ساعت هفت این هفته با ارائه «بهنام سیم‌جو» درباره توصیه‌هایی برای برنامه‌نویسیان تازه‌وارد">
     <meta property="og:url" content="https://meet.pcworms.ir" />
     <meta property="og:image" content="https://meet.pcworms.ir/preview.png" />
     <title>دورهمی های کرم های کامپیوتر</title>
@@ -41,13 +42,24 @@
                 document.getElementById("link").innerHTML = "لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام شده";
             } else {
                 // Time calculations for days, hours, minutes and seconds
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                distance = Math.floor(distance / 1000)
+                var days = Math.floor(distance / (3600 * 24));
+                distance %= 3600 * 24;
+                var res = days > 0 ? days + " روز" : "";
+                if (distance > 0) res += " و ";
+
+                var hours = Math.floor(distance / 3600);
+                distance %= 3600;
+                if (hours > 0) res += hours + " ساعت";
+                if (distance > 0) res += " و ";
+                var minutes = Math.floor(distance / 60);
+                distance %= 60;
+                if (minutes > 0) res += minutes + " دقیقه"
+                if (distance > 0) res += " و "
+                var seconds = distance;
 
                 // Display the result in the element with id="demo"
-                var res = days > 0 ? days + " روز" : "";
+                var res = days + " روز و ";
                 res += days > 0 && hours > 0 ? " و " : ""
                 res += hours > 0 ? hours + " ساعت" : "";
                 res += hours > 0 && minutes > 0 ? " و " : ""
