@@ -4,9 +4,10 @@ html, body{
 }
 
 .container-fluid{
-    position: static;
+    position: absolute;
     top: 50%;
-    transform: translateY(50%);
+    left:0;
+    transform: translateY(-50%);
 }
 
 .profile{
