@@ -1,0 +1,10 @@
+html, body{
+    height: 1024px;
+    width: 1024px;
+}
+
+.container-fluid{
+    position: static;
+    top: 50%;
+    transform: translateY(50%);
+}

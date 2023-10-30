@@ -19,10 +19,17 @@ jobs:
           vars: data.json
           output-file: template/index.html
           engine: mustache
+      - name: Render preview
+        uses: recih/template-render-action@v1.0.2
+        with:
+          template-file: template/preview.mustache
+          vars: data.json
+          output-file: template/preview.html
+          engine: mustache
       - name: Install pageres
         run: npm install --global pageres-cli
       - name: create social media preview
-        run: "pageres template/index.html 800x800 --filename='template/preview' --hide='#counter' --overwrite --style='body{background-size: 50%; padding-left:-80px}.logo{width: 40vw;}.big-text{font-size: 40vw;}html{font-family: .8rem;}.subject-bg{backdrop-filter: blur(5px);}.profile{width: 80px;}'"
+        run: "pageres template/preview.html 1024x1024 --filename='template/preview' --overwrite"
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
