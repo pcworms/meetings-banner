@@ -20,7 +20,7 @@ body{
     padding: 0;
     margin: 0;
     background-color: #000d12 !important;
-    background-image: url('./assert/bg-pattern.png') !important;
+    background-image: url('./assets/bg-pattern.png') !important;
     background-repeat: repeat !important;
     background-position: top center !important;
     background-attachment: fixed !important;
