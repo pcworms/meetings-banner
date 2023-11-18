@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="#{{count}} - دورهمی کرم‌های کامپیوتر" />
-    <meta name="og:description"
-        content="دورهمی های کرم‌های کامپیوتر - جمعه هر هفته ساعت شش
+    <meta name="og:description" content="دورهمی های کرم‌های کامپیوتر - جمعه هر هفته ساعت شش
 {{#speaker}} این هفته با ارائه «{{speaker}}» درباره {{subject}}{{/speaker}}">
     <meta property="og:url" content="https://meet.pcworms.ir" />
     <meta property="og:image" content="https://meet.pcworms.ir/preview.png" />
@@ -60,7 +59,7 @@
                 var seconds = distance;
 
                 // Display the result in the element with id="demo"
-                var res = days + " روز و ";
+                var res = days + " روز";
                 res += days > 0 && hours > 0 ? " و " : ""
                 res += hours > 0 ? hours + " ساعت" : "";
                 res += hours > 0 && minutes > 0 ? " و " : ""
@@ -100,34 +99,34 @@
         <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-md-8 p-2 subject-bg">
                 <div class=" row align-items-center">
-                <div class="col-auto float-start text-center"><img src="{{profile}}" class="profile"></div>
-                <div class="col">
-                    <small class="speaker d-block">
-                        این هفته با «{{speaker}}» درباره:
-                    </small>
-                    <h2 class="subject">{{subject}}</h2>
-                    <div class="text-center">
-                        <small class="time" id="counter"></small>
+                    <div class="col-auto float-start text-center"><img src="{{profile}}" class="profile"></div>
+                    <div class="col">
+                        <small class="speaker d-block">
+                            این هفته با «{{speaker}}» درباره:
+                        </small>
+                        <h2 class="subject">{{subject}}</h2>
+                        <div class="text-center">
+                            <small class="time" id="counter"></small>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        {{/speaker}}
-        {{^speaker}}
-        <div class="row justify-content-center text-center">
+            {{/speaker}}
+            {{^speaker}}
+            <div class="row justify-content-center text-center">
+                <div class="text-center">
+                    <small id="counter"></small>
+                </div>
+            </div>
+            {{/speaker}}
             <div class="text-center">
-                <small id="counter"></small>
+                <a href="https://pcworms.ir/pcworms-chatrooms/">
+                    <small id="link">
+                        لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام خواهد شد
+                    </small>
+                </a>
             </div>
         </div>
-        {{/speaker}}
-        <div class="text-center">
-            <a href="https://pcworms.ir/pcworms-chatrooms/">
-                <small id="link">
-                لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام خواهد شد
-                </small>
-            </a>
-        </div>
-    </div>
 </body>
 
 </html>
