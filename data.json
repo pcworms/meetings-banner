@@ -2,6 +2,6 @@
   "date": "Dec 01, 2023 18:00:00",
   "count": 8,
   "speaker": "بهنام سیم‌جو",
-  "profile": "assets/avatars/bsimjoo",
+  "profile": "https://github.com/pcworms/meetings-banner/blob/df4d6d5cfff1a10f28cd9b8342dfd90c452ea76e/template/assets/avatars/bsimjoo.png",
   "subject": "معرفی و توسعه بک‌اند با FastAPI"
 }
