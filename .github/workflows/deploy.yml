@@ -30,6 +30,8 @@ jobs:
         run: npm install --global pageres-cli
       - name: create social media preview
         run: "pageres template/preview.html 1024x1024 --filename='template/preview' --overwrite"
+      - name: take screenshot
+        run: "pageres template/post.html 1065x780 --filename='template/screenshot' --overwrite"
       - name: copy data json to publish
         run: cp data.json template/data.json
       - name: Deploy to GitHub Pages
