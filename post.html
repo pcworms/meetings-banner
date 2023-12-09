@@ -58,14 +58,7 @@
                 var seconds = distance;
 
                 // Display the result in the element with id="demo"
-                var res = days + " روز";
-                res += days > 0 && hours > 0 ? " و " : ""
-                res += hours > 0 ? hours + " ساعت" : "";
-                res += hours > 0 && minutes > 0 ? " و " : ""
-                res += minutes > 0 ? minutes + " دقیقه" : "";
-                res += minutes > 0 && seconds > 0 ? " و " : ""
-                res += seconds > 0 ? seconds + " ثانیه" : "";
-                res += " دیگر"
+                var res = days + " روز دیگر";
                 const regex = /\d/g
                 let nums = '۰۱۲۳۴۵۶۷۸۹';
                 res = res.replace(regex, function (d) {
@@ -110,11 +103,9 @@
                 </div>
             </div>
             <div class="text-center">
-                <a href="https://pcworms.ir/pcworms-chatrooms/">
-                    <small id="link">
-                        لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام خواهد شد
-                    </small>
-                </a>
+                <small id="link">
+                    لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام خواهد شد
+                </small>
             </div>
         </div>
 </body>
