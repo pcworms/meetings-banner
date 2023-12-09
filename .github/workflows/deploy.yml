@@ -26,6 +26,13 @@ jobs:
           vars: data.json
           output-file: template/preview.html
           engine: mustache
+      - name: Render preview
+        uses: recih/template-render-action@v1.0.2
+        with:
+          template-file: template/post.mustache
+          vars: data.json
+          output-file: template/post.html
+          engine: mustache
       - name: Install pageres
         run: npm install --global pageres-cli
       - name: create social media preview
