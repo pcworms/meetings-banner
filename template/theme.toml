@@ -1,0 +1,12 @@
+name = "pcworms meetings"
+license = "GPL-3.0-or-later"
+description = "A theme for a local meeting"
+homepage = "https://github.com/pcworms/meetings-banner-template"
+tags = ["blog", "responsive", "clean" "simple" "dark", "minimalistic"]
+features = ["responsive", "clean", "RSS"]
+min_version = "0.62.0"
+
+[author]
+  name = "Farooq Karimi Zadeh"
+  homepage = "https://far.chickenkiller.com"
+  email = "fkz@riseup.net"

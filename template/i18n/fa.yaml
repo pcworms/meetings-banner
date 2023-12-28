@@ -1,0 +1,8 @@
+ - id: 404title
+   translation: "پیدا نشد"
+
+ - id: 404text
+   translation: "صفحه‌ای که به دنبال آن هستید پیدا نشد"
+
+ - id: reports
+   translation: "گزارش دورهمی‌های اخیر"

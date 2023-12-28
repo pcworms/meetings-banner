@@ -1,0 +1,20 @@
+- id: 404title
+  translation: "404 Not found"
+
+- id: 404text
+  translation: "The page you are looking was not found"
+
+- id: reports
+  translation: "Meetings reports"
+
+- id: thistime
+  translation: "This time with "
+
+- id: about
+  translation: " about:"
+
+- id: ended
+  translation: "Ended!"
+
+- id: seeyou
+  translation: "See you next time!"
