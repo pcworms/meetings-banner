@@ -18,3 +18,30 @@
 
 - id: seeyou
   translation: "See you next time!"
+
+- id: free_discussion
+  translation: "This time we have free discussion!"
+
+- id: number
+  translation: "Number"
+
+- id: meeting_link
+  translation: "Link to online meeting"
+
+- id: loading
+  translation: "Loading..."
+
+- id: days
+  translation: "Day(s)"
+
+- id: hours
+  translation: "Hour(s)"
+
+- id: minutes
+  translation: "Minute(s)"
+
+- id: seconds
+  translation: "Second(s)"
+
+- id: and 
+  translation: "and"
