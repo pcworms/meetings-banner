@@ -1,0 +1,8 @@
+date = "Feb 15, 2024 18:00:00"
+count = 13
+speaker = "Javad"
+subject = "Fraud detection"
+baseURL = "https://meet.pcworms.ir"
+languageCode="fa-ir"
+theme = "meetings"
+title = "pcworms meetings"
