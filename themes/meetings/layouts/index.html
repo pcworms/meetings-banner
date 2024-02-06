@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content='{{ .Params.title }} {{ i18n "number" }} {{ .Params.count }}' />
+    {{- if .Params.speaker }}
+    <meta name="og:description" content='{{ i18n "thistime" }} {{ .Params "speaker" }} {{ i18n "about" }} {{ .Params "subject" }}' />
+    {{- end }}
+    {{- if not .Params.speaker }}
+      <meta name="og:description" content='{{ i18n "free_discussion" }}' />
+    {{- end }}
+    <meta property="og:url" content='{{ .Params.baseUrl }}' />
+    <meta property="og:image" content='{{ .Params.baseUrl }}/preview.png' />
+    <title>{{ .Params.title }}</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&family=Vazirmatn:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date('{{ .Params.date }}').getTime();
+        var finishDate = countDownDate + (1.5 * 3600 * 1000);
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            if (now > finishDate) {
+                document.getElementById("counter").innerHTML = '{{ i18n "ended" }}';
+            } else if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("counter").innerHTML = '{{ i18n "loading" }}';
+                document.getElementById("link").innerHTML = '{{ i18n "meeting_link" }}';
+            } else {
+                // Time calculations for days, hours, minutes and seconds
+                distance = Math.floor(distance / 1000)
+                var days = Math.floor(distance / (3600 * 24));
+                distance %= 3600 * 24;
+                var res = days > 0 ? days + '{{ i18n "days" }} ' : "";
+                if (distance > 0) res += ' {{ i18n "and" }} ';
+
+                var hours = Math.floor(distance / 3600);
+                distance %= 3600;
+                if (hours > 0) res += hours + ' {{ i18n "hours" }}';
+                if (distance > 0) res += ' {{ i18n "and" }} ';
+                var minutes = Math.floor(distance / 60);
+                distance %= 60;
+                if (minutes > 0) res += minutes + ' {{ i18n "minutes" }}'
+                if (distance > 0) res += '{{ i18n "and" }} '
+                var seconds = distance;
+
+                // Display the result in the element with id="demo"
+                var res = days + '{{ i18n "days" }} ';
+                res += days > 0 && hours > 0 ? ' {{ i18n "and" }} ' : ""
+                res += hours > 0 ? hours + '{{ i18n "hours" }}' : "";
+                res += hours > 0 && minutes > 0 ? ' {{ i18n "and" }} ' : ""
+                res += minutes > 0 ? minutes + ' {{ i18n "minutes" }}' : "";
+                res += minutes > 0 && seconds > 0 ? ' {{ i18n "and" }} ' : ""
+                res += seconds > 0 ? seconds + ' {{ i18n "seconds" }}' : "";
+                const regex = /\d/g
+                let nums = '۰۱۲۳۴۵۶۷۸۹';
+                res = res.replace(regex, function (d) {
+                    return nums[d]
+                })
+                document.getElementById("counter").innerHTML = res;
+            }
+
+
+        }, 1000);
+    </script>
+</head>
+
+<body class="text-light">
+    <div class="container-fluid">
+        <div class="row mt-2 text-center">
+            <div class="col d-flex  align-items-center justify-content-center">
+                <span class="big-text d-inline-block">{{ .Params.count }}</span>
+                <img class="logo" src="{{ .Params.meetingLogo }}" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col text-center">
+              <h1 class="fs-1">{{ .Params.title }}</h1>
+              <small>{{ .Params.time }}</small>
+            </div>
+        </div>
+        {{- if .Params.speaker }}
+        <div class="row justify-content-center">
+            <div class="col-12 col-sm-10 col-md-8 p-2 subject-bg">
+                <div class=" row align-items-center">
+                    <div class="col-auto float-start text-center"><img src='{{ .Params "profile" }}' class="profile"></div>
+                    <div class="col">
+                        <small class="speaker d-block">
+                          {{ i18n "thistime" }} {{ .Params "speaker" }} {{ i18n "about" }}
+                        </small>
+                        <h2 class="subject">{{ .Params.subject}}</h2>
+                        <div class="text-center">
+                            <small class="time" id="counter"></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{- end}}
+            {{- if not .Params.speaker}}
+            <div class="row justify-content-center text-center">
+                <div class="col">
+                  {{ i18n "free_discussion" }}
+                </div>
+                <div class="text-center">
+                    <small id="counter"></small>
+                </div>
+            </div>
+            {{- end}}
+            <div class="text-center">
+                <a href="{{ .Params.meetingLink }}">
+                    <small id="link">
+                      {{ i18n "meeting_link" }}
+                    </small>
+                </a>
+            </div>
+        </div>
+</body>
+
+</html>
