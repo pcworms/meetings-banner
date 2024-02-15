@@ -42,9 +42,9 @@ jobs:
           echo "::set-output name=data::$content"
       - name: Copy to subdir
         run: |
-          mkdir ${{fromJson(steps.set_var.outputs.data).count}}
-          cp -r template/* ${{fromJson(steps.set_var.outputs.data).count}}
-          mv ${{fromJson(steps.set_var.outputs.data).count}} tempalte/
+          mkdir ./${{fromJson(steps.set_var.outputs.data).count}}
+          cp -r ./template/* ./${{fromJson(steps.set_var.outputs.data).count}}
+          mv ./${{fromJson(steps.set_var.outputs.data).count}} ./tempalte/${{fromJson(steps.set_var.outputs.data).count}}
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
