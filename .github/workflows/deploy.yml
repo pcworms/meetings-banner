@@ -43,10 +43,10 @@ jobs:
       - name: Copy to subdir
         run: |
           count="${{fromJson(steps.set_var.outputs.data).count}}"
-          mkdir ./tmp
-          cp -r ./template/* ./tmp
-          mkdir ./template/$count
-          cp ./tmp/* ./tempalte/$count/
+          mkdir tmp
+          cp -r template/* tmp
+          mkdir template/$count
+          cp -r tmp/* template/$count/
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
