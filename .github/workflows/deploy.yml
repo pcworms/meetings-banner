@@ -26,21 +26,24 @@ jobs:
           vars: data.json
           output-file: template/preview.html
           engine: mustache
-      - name: Render preview
-        uses: recih/template-render-action@v1.0.2
-        with:
-          template-file: template/post.mustache
-          vars: data.json
-          output-file: template/post.html
-          engine: mustache
       - name: Install pageres
         run: npm install --global pageres-cli
       - name: create social media preview
         run: "pageres template/preview.html 1024x1024 --filename='template/preview' --overwrite"
-      - name: take screenshot
-        run: "pageres template/post.html 1065x780 --filename='template/screenshot' --overwrite"
       - name: copy data json to publish
         run: cp data.json template/data.json
+      - name: Read data
+        id: set_var
+        run: |
+          content=`cat ./path/to/package.json`
+          content="${content//'%'/'%25'}"
+          content="${content//$'\n'/'%0A'}"
+          content="${content//$'\r'/'%0D'}"
+          echo "::set-output name=data::$content"
+      - run: |
+          mkdir ${{fromJson(steps.set_var.outputs.data).count}}
+          cp -r template/* ${{fromJson(steps.set_var.outputs.data).count}}
+          mv -r ${{fromJson(steps.set_var.outputs.data).count}} tempalte/
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
