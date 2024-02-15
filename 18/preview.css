@@ -1,0 +1,15 @@
+html, body{
+    height: 1024px;
+    width: 1024px;
+}
+
+.container-fluid{
+    position: absolute;
+    top: 50%;
+    left:0;
+    transform: translateY(-50%);
+}
+
+.profile{
+    width: 200px;
+}
