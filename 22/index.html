@@ -20,12 +20,18 @@
         rel="stylesheet">
     <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("Mar 29, 2024 18:00:00").getTime();
-        var finishDate = countDownDate + (1.5 * 3600 * 1000);
+        if ("Mar 29, 2024 18:00:00" === "cancelled")
+            var canceled = true;
+        else
+            var countDownDate = new Date("Mar 29, 2024 18:00:00").getTime();
+            var finishDate = countDownDate + (1.5 * 3600 * 1000);
 
         // Update the count down every 1 second
         var x = setInterval(function () {
-
+            if (cancelled) {
+                document.getElementById("counter").innerHTML = "کنسل شد";
+                document.getElementById("link").innerHTML = "لینک جلسه هم در گروه های ما در تلگرام و ماتریکس اعلام شده بود!";
+            }
             // Get today's date and time
             var now = new Date().getTime();
 
