@@ -20,8 +20,9 @@
         rel="stylesheet">
     <script>
         // Set the date we're counting down to
+        var cancelled = false;
         if ("{{date}}" === "cancelled")
-            var canceled = true;
+            cancelled = true;
         else
             var countDownDate = new Date("{{date}}").getTime();
             var finishDate = countDownDate + (1.5 * 3600 * 1000);
