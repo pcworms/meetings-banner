@@ -20,16 +20,16 @@
         rel="stylesheet">
     <script>
         // Set the date we're counting down to
-        if ("Apr 5 2024 18:00:00" === "cancelled")
+        if ("Apr 5 2024 19:00:00" === "cancelled")
             var canceled = true;
         else
-            var countDownDate = new Date("Apr 5 2024 18:00:00").getTime();
+            var countDownDate = new Date("Apr 5 2024 19:00:00").getTime();
             var finishDate = countDownDate + (1.5 * 3600 * 1000);
 
         // Update the count down every 1 second
         var x = setInterval(function () {
             if (cancelled) {
-                document.getElementById("counter").innerHTML = "کنسل شد";
+                document.getElementById("counter").innerHTML = "🚫 کنسل شد";
                 document.getElementById("link").innerHTML = "لینک جلسه هم در گروه های ما در تلگرام و ماتریکس اعلام شده بود!";
             }
             // Get today's date and time
@@ -39,7 +39,7 @@
             var distance = countDownDate - now;
 
             if (now > finishDate) {
-                document.getElementById("counter").innerHTML = "خاتمه یافت";
+                document.getElementById("counter").innerHTML = "❌ خاتمه یافت";
                 document.getElementById("link").innerHTML = "لینک جلسه هم در گروه های ما در تلگرام و ماتریکس اعلام شده بود!";
             } else if (distance < 0) {
                 clearInterval(x);
@@ -97,7 +97,7 @@
         <div class="row">
             <div class="col text-center">
                 <h1 class="fs-1">دورهمی های کرم‌های کامپیوتر</h1>
-                <small>هر جمعه ساعت ۱۸</small>
+                <small>⚠️ این هفته ساعت ۱۹</small>
             </div>
         </div>
         <div class="row justify-content-center">

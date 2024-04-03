@@ -29,7 +29,7 @@
         // Update the count down every 1 second
         var x = setInterval(function () {
             if (cancelled) {
-                document.getElementById("counter").innerHTML = "کنسل شد";
+                document.getElementById("counter").innerHTML = "🚫 کنسل شد";
                 document.getElementById("link").innerHTML = "لینک جلسه هم در گروه های ما در تلگرام و ماتریکس اعلام شده بود!";
             }
             // Get today's date and time
@@ -39,7 +39,7 @@
             var distance = countDownDate - now;
 
             if (now > finishDate) {
-                document.getElementById("counter").innerHTML = "خاتمه یافت";
+                document.getElementById("counter").innerHTML = "❌ خاتمه یافت";
                 document.getElementById("link").innerHTML = "لینک جلسه هم در گروه های ما در تلگرام و ماتریکس اعلام شده بود!";
             } else if (distance < 0) {
                 clearInterval(x);
@@ -97,7 +97,12 @@
         <div class="row">
             <div class="col text-center">
                 <h1 class="fs-1">دورهمی های کرم‌های کامپیوتر</h1>
+                {{#time}}
+                <small>⚠️ این هفته ساعت {{time}}</small>
+                {{/time}}
+                {{^time}}
                 <small>هر جمعه ساعت ۱۸</small>
+                {{/time}}
             </div>
         </div>
         {{#speaker}}
