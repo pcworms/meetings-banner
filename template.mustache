@@ -4,12 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="#{{count}} - دورهمی کرم‌های کامپیوتر" />
-    <meta name="og:description" content="دورهمی های کرم‌های کامپیوتر - جمعه هر هفته ساعت شش
-{{#speaker}} این هفته با ارائه «{{speaker}}» درباره {{subject}}{{/speaker}}">
+    {{^cancelled}}
+        <meta property="og:title" content="{{fa.meeting}} #{{count}} {{fa.pcworms}}{{#speaker}} - {{subject}}{{/speaker}}" />
+        {{^time_except}}
+            <meta name="og:description" content="{{fa.meeting}} #{{count}} {{fa.pcworms}} {{fa.default_time}} {{#speaker}} {{fa.about}} {{subject}} {{fa.presented_by}} {{speaker}}{{/speaker}}"/>
+        {{/time_except}}
+        {{#time_except}}
+            <meta name="og:description" content="{{fa.meeting}} #{{count}} {{fa.pcworms}} {{fa.just_this_week}} {{time_except}} {{#speaker}} {{fa.about}} {{subject}} {{fa.presented_by}} {{speaker}}{{/speaker}}"/>
+        {{/time_except}}
+    {{/cancelled}}
+    {{#cancelled}}
+        <meta property="og:title" content="{{fa.meeting}} #{{count}} {{fa.pcworms}}{{#speaker}} - {{subject}}{{/speaker}} {{fa.cancelled}}" />
+        <meta name="og:description" content="{{fa.meeting}} #{{count}} {{fa.pcworms}} {{#speaker}} {{fa.about}} {{subject}}{{/speaker}} {{fa.cancelled}}"/>
+    {{/cancelled}}
     <meta property="og:url" content="https://meet.pcworms.ir" />
     <meta property="og:image" content="./preview.png" />
-    <title>دورهمی های کرم های کامپیوتر</title>
+    <title>دورهمی‌های کرم‌های کامپیوتر</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -18,21 +28,13 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&family=Vazirmatn:wght@400;700&display=swap"
         rel="stylesheet">
+    {{^cancelled}}
     <script>
-        // Set the date we're counting down to
-        var cancelled = false;
-        if ("{{date}}" === "cancelled")
-            cancelled = true;
-        else
-            var countDownDate = new Date("{{date}}").getTime();
-            var finishDate = countDownDate + (1.5 * 3600 * 1000);
+        var countDownDate = new Date("{{date}}").getTime();
+        var finishDate = countDownDate + (1.5 * 3600 * 1000);
 
         // Update the count down every 1 second
         var x = setInterval(function () {
-            if (cancelled) {
-                document.getElementById("counter").innerHTML = "🚫 کنسل شد";
-                document.getElementById("link").innerHTML = "لینک جلسه هم در گروه های ما در تلگرام و ماتریکس اعلام شده بود!";
-            }
             // Get today's date and time
             var now = new Date().getTime();
 
@@ -85,6 +87,7 @@
 
         }, 1000);
     </script>
+    {{/cancelled}}
 </head>
 
 <body class="text-light">
@@ -98,12 +101,12 @@
         <div class="row">
             <div class="col text-center">
                 <h1 class="fs-1">دورهمی های کرم‌های کامپیوتر</h1>
-                {{#time}}
-                <small>⚠️ (هر هفته ساعت ۱۸) این جمعه ساعت {{time}}</small>
-                {{/time}}
-                {{^time}}
+                {{#time_except}}
+                <small>⚠️ {{fa.just_this_week}} {{time_except}}</small>
+                {{/time_except}}
+                {{^time_except}}
                 <small>هر جمعه ساعت ۱۸</small>
-                {{/time}}
+                {{/time_except}}
             </div>
         </div>
         {{#speaker}}
@@ -113,11 +116,16 @@
                     <div class="col-auto float-start text-center"><img src="{{profile}}" class="profile"></div>
                     <div class="col">
                         <small class="speaker d-block">
-                            این هفته با «{{speaker}}» درباره:
+                            {{speaker}}:
                         </small>
                         <h2 class="subject">{{subject}}</h2>
                         <div class="text-center">
+                        {{#cancelled}}
+                            <small class="time">{{fa.cancelled}}</small>
+                        {{/cancelled}}
+                        {{^cancelled}}
                             <small class="time" id="counter"></small>
+                        {{/cancelled}}
                         </div>
                     </div>
                 </div>
@@ -133,7 +141,7 @@
             <div class="text-center">
                 <a href="https://pcworms.ir/pcworms-chatrooms/">
                     <small id="link">
-                        لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام خواهد شد
+                        ℹ️ لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام خواهد شد
                     </small>
                 </a>
             </div>

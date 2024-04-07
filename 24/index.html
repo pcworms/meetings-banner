@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="#{{count}} - دورهمی کرم‌های کامپیوتر" />
-    <meta name="og:description" content="دورهمی های کرم‌های کامپیوتر - جمعه هر هفته ساعت شش
-{{#speaker}} این هفته با ارائه «{{speaker}}» درباره {{subject}}{{/speaker}}">
+        <meta property="og:title" content="دورهمی #24 کرم‌های کامپیوتر - برنامه‌نویسی با زبان راست" />
+            <meta name="og:description" content="دورهمی #24 کرم‌های کامپیوتر جمعه ساعت ۱۸  درباره‌ی برنامه‌نویسی با زبان راست با ارائه‌ی فاروق کریمی‌زاده"/>
     <meta property="og:url" content="https://meet.pcworms.ir" />
     <meta property="og:image" content="./preview.png" />
-    <title>دورهمی های کرم های کامپیوتر</title>
+    <title>دورهمی‌های کرم‌های کامپیوتر</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -19,20 +18,11 @@
         href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&family=Vazirmatn:wght@400;700&display=swap"
         rel="stylesheet">
     <script>
-        // Set the date we're counting down to
-        var cancelled = false;
-        if ("{{date}}" === "cancelled")
-            cancelled = true;
-        else
-            var countDownDate = new Date("{{date}}").getTime();
-            var finishDate = countDownDate + (1.5 * 3600 * 1000);
+        var countDownDate = new Date("Apr 12 2024 18:00:00").getTime();
+        var finishDate = countDownDate + (1.5 * 3600 * 1000);
 
         // Update the count down every 1 second
         var x = setInterval(function () {
-            if (cancelled) {
-                document.getElementById("counter").innerHTML = "🚫 کنسل شد";
-                document.getElementById("link").innerHTML = "لینک جلسه هم در گروه های ما در تلگرام و ماتریکس اعلام شده بود!";
-            }
             // Get today's date and time
             var now = new Date().getTime();
 
@@ -91,49 +81,35 @@
     <div class="container-fluid">
         <div class="row mt-2 text-center">
             <div class="col d-flex  align-items-center justify-content-center">
-                <span class="big-text d-inline-block">#{{count}}</span>
+                <span class="big-text d-inline-block">#24</span>
                 <img class="logo" src="./assets/meeting-logo.png" alt="">
             </div>
         </div>
         <div class="row">
             <div class="col text-center">
                 <h1 class="fs-1">دورهمی های کرم‌های کامپیوتر</h1>
-                {{#time}}
-                <small>⚠️ (هر هفته ساعت ۱۸) این جمعه ساعت {{time}}</small>
-                {{/time}}
-                {{^time}}
                 <small>هر جمعه ساعت ۱۸</small>
-                {{/time}}
             </div>
         </div>
-        {{#speaker}}
         <div class="row justify-content-center">
             <div class="col-12 col-sm-10 col-md-8 p-2 subject-bg">
                 <div class=" row align-items-center">
-                    <div class="col-auto float-start text-center"><img src="{{profile}}" class="profile"></div>
+                    <div class="col-auto float-start text-center"><img src="assets&#x2F;avatars&#x2F;farooqkz.png" class="profile"></div>
                     <div class="col">
                         <small class="speaker d-block">
-                            این هفته با «{{speaker}}» درباره:
+                            فاروق کریمی‌زاده:
                         </small>
-                        <h2 class="subject">{{subject}}</h2>
+                        <h2 class="subject">برنامه‌نویسی با زبان راست</h2>
                         <div class="text-center">
                             <small class="time" id="counter"></small>
                         </div>
                     </div>
                 </div>
             </div>
-            {{/speaker}}
-            {{^speaker}}
-            <div class="row justify-content-center text-center">
-                <div class="text-center">
-                    <small id="counter"></small>
-                </div>
-            </div>
-            {{/speaker}}
             <div class="text-center">
                 <a href="https://pcworms.ir/pcworms-chatrooms/">
                     <small id="link">
-                        لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام خواهد شد
+                        ℹ️ لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام خواهد شد
                     </small>
                 </a>
             </div>

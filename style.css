@@ -29,8 +29,8 @@ body{
 }
 
 .big-text{
-    font-size: 370px;
-    line-height: 370px;
+    font-size: 350px;
+    line-height: 350px;
     font-family: 'Ubuntu Mono', monospace;
     font-weight: bold;
 }
@@ -41,7 +41,10 @@ body{
     border-radius: 20px;
 }
 
-.logo{aspect-ratio: 1;}
+.logo{
+    aspect-ratio: 1;
+    width: 20vw;
+}
 
 .profile{
     width: 120px;
@@ -66,7 +69,7 @@ small{
     }
 
     .logo{
-        width: 40vw;
+        width: 35vw;
     }
 
     .big-text{
