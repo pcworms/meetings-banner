@@ -1,8 +1,19 @@
 {
-  "date": "Apr 5 2024 19:00:00",
-  "time": "۱۹",
-  "count": 23,
-  "speaker": "جعفر فرقانلوژ",
-  "profile": "assets/avatars/mehr32.png",
-  "subject": "فراجستجوگر‌های سرکس و موآ"
+  "cancelled": false,
+  "date": "Apr 12 2024 18:00:00",
+  "time_except": null,
+  "count": 24,
+  "speaker": "فاروق کریمی‌زاده",
+  "profile": "assets/avatars/farooqkz.png",
+  "subject": "برنامه‌نویسی با زبان راست",
+  "fa": {
+    "meeting": "دورهمی",
+    "pcworms": "کرم‌های کامپیوتر",
+    "default_time": "جمعه ساعت ۱۸",
+    "every_week": "هر هفته",
+    "cancelled": "🚫 لغو شد",
+    "just_this_week": "فقط این هفته",
+    "presented_by": "با ارائه‌ی",
+    "about": "درباره‌ی"
+  }
 }
