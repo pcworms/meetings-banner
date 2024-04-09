@@ -1,5 +1,5 @@
 {
-  "cancelled": true,
+  "cancelled": false,
   "date": "Apr 12 2024 18:00:00",
   "time_except": null,
   "count": 24,
