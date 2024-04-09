@@ -13,3 +13,7 @@ html, body{
 .profile{
     width: 200px;
 }
+
+.logo {
+    width: 40vw !important;
+}
