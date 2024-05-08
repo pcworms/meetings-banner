@@ -1,11 +1,11 @@
 {
   "cancelled": false,
-  "date": "May 03 2024 18:00:00",
+  "date": "May 10 2024 18:00:00",
   "time_except": null,
-  "count": 25,
-  "speaker": "فاروق کریمی‌زاده",
-  "profile": "assets/avatars/farooqkz.png",
-  "subject": "برنامه‌نویسی با زبان راست",
+  "count": 26,
+  "speaker": null,
+  "profile": null,
+  "subject": null,
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
