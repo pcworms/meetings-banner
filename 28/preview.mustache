@@ -27,17 +27,31 @@
                 <span class="big-text d-inline-block">#{{count}}</span>
             </div>
         </div>
-        {{#speaker}}
         <div class="row justify-content-center">
-            <div class="col-12 col-md-10 p-2"">
-                <div class=" row align-items-center">
-                <div class="col">
-                    <h2 class="subject" dir="rtl">{{subject}}</h1>
+            {{#speaker}}
+                <div class="col-12 col-md-10 p-2"">
+                    <div class=" row align-items-center">
+                    <div class="col">
+                        <h2 class="subject" dir="rtl">{{subject}}</h2>
+                    </div>
+                    <div class="col-auto float-start text-center"><img src="{{profile}}" class="profile"></div>
+            {{/speaker}}
+            {{^speaker}}
+                <div class="col-12 p-2 text-center">
+                    <h2 class="subject" dir="rtl">این هفته به صورت بحث آزاد</h2>
                 </div>
-                <div class="col-auto float-start text-center"><img src="{{profile}}" class="profile"></div>
+            {{/speaker}}
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 p-2 text-center">
+                {{#time_except}}
+                <small>⚠️ {{fa.just_this_week}} {{time_except}}</small>
+                {{/time_except}}
+                {{^time_except}}
+                <small>هر جمعه ساعت ۱۸</small>
+                {{/time_except}}
             </div>
         </div>
-        {{/speaker}}
     </div>
 </body>
 
