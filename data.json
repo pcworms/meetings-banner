@@ -1,11 +1,11 @@
 {
   "cancelled": false,
-  "date": "June 07 2024 18:00:00",
-  "time_except": null,
-  "count": 29,
-  "speaker": null,
-  "profile": null,
-  "subject": null,
+  "date": "July 19 2024 17:00:00",
+  "time_except": "July 19 2024 17:00:00",
+  "count": 32,
+  "speaker": "فاروق کریمی‌زاده",
+  "profile": "assets/avatars/farooqkz",
+  "subject": "ماکرو‌ها در راست و چند کاربرد در یک نرم‌افزار آزاد",
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
