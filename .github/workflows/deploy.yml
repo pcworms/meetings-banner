@@ -27,7 +27,9 @@ jobs:
           output-file: template/preview.html
           engine: mustache
       - name: Install pageres
-        run: npm install --global pageres-cli
+        run: |
+          npm install --global puppeteer
+          npm install --global pageres-cli
       - name: create social media preview
         run: "pageres template/preview.html 1024x1024 --filename='template/preview' --overwrite"
       - name: copy data json to publish
