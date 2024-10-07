@@ -1,11 +1,11 @@
 {
   "cancelled": false,
-  "date": "August 9 2024 18:00:00",
+  "date": "Oct 11 2024 18:00:00",
   "time_except": null,
-  "count": 35,
-  "speaker": "امیرحسین پناهی‌فر",
-  "profile": "assets/avatars/AHP.jpg",
-  "subject": "نگاهی به دنیای پنهان اینترنت: عملکرد و مسائل TOR",
+  "count": 36,
+  "speaker": null,
+  "profile": "assets/avatars/main-profile.png",
+  "subject": "بحث آزاد",
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
