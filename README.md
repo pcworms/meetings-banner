@@ -13,4 +13,4 @@ For those who are curious and as a note for ourselves, this is how we create/upd
 - Banner images that show up as the web preview on social media
 
 ### What We Came Up With
-I (bsimjoo!) wrote a template using [Mustache](https://mustache.github.io/) syntax, then created a GitHub Action to generate the final webpage using the template and the JSON file. I also used Pageres to create images from the generated HTML file.
+I [bsimjoo!](@b-simjoo) wrote a template using [Mustache](https://mustache.github.io/) syntax, then created a GitHub Action to generate the final webpage using the template and the JSON file. I also used Pageres to create images from the generated HTML file.
