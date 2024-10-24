@@ -1,0 +1,17 @@
+---
+cancelled: false
+date: Oct 25 2024 18:00:00
+time_except: 
+count: 38
+speaker: کرم‌های کامپیوتر
+profile: assets/avatars/main-profile.png
+subject: لینوکس موبایل
+fa:
+  meeting: دورهمی
+  pcworms: کرم‌های کامپیوتر
+  default_time: جمعه ساعت ۱۸
+  every_week: هر هفته
+  cancelled: "\U0001F6AB لغو شد"
+  just_this_week: فقط این هفته
+  presented_by: با ارائهٔ
+  about: دربارهٔ
