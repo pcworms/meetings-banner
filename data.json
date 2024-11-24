@@ -1,11 +1,11 @@
 {
   "cancelled": false,
-  "date": "Nov 8 2024 18:00:00",
+  "date": "Nov 29 2024 18:00:00",
   "time_except": null,
-  "count": 40,
-  "speaker": null,
-  "profile": "assets/avatars/main-profile.png",
-  "subject": null,
+  "count": 41,
+  "speaker": "بهنام سیم‌جو",
+  "profile": "assets/avatars/bsimjoo.png",
+  "subject": "یادگیری تکاملی (الگوریتم وراثت)",
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
