@@ -1,11 +1,11 @@
 {
   "cancelled": false,
-  "date": "Dec 19 2024 18:00:00",
-  "time_except": "به مناسبت شب یلدا، پنجشنبه ساعت ۱۸",
-  "count": 42,
-  "speaker": null,
-  "profile": "assets/avatars/pcworms.png",
-  "subject": null,
+  "date": "Dec 27 2024 18:00:00",
+  "time_except": null,
+  "count": 43,
+  "speaker": "شهراد حکمتی فرید",
+  "profile": "assets/avatars/shahrad.jpg",
+  "subject": "reinforced learning و سناریو ماه نشین",
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
