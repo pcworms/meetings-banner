@@ -1,11 +1,11 @@
 {
   "cancelled": false,
-  "date": "Jan 03 2025 18:00:00",
+  "date": "Jan 10 2025 18:00:00",
   "time_except": null,
-  "count": 44,
-  "speaker": null,
-  "profile": null,
-  "subject": "بحث آزاد",
+  "count": 45,
+  "speaker": "شهراد حکمتی فرید",
+  "profile": "assets/avatars/shahrad.jpg",
+  "subject": "آموختار اسپارکل و کاربری آن در ویکی‌داده و OSM",
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
