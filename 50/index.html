@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta property="og:title" content="دورهمی #50 کرم‌های کامپیوتر - وضعیت وبلاگ و استفاده از ایستاسازها 🚫 لغو شد" />
-        <meta name="og:description" content="دورهمی #50 کرم‌های کامپیوتر  دربارهٔ وضعیت وبلاگ و استفاده از ایستاسازها 🚫 لغو شد"/>
+        <meta property="og:title" content="دورهمی #50 کرم‌های کامپیوتر - وضعیت وبلاگ و استفاده از ایستاسازها" />
+            <meta name="og:description" content="دورهمی #50 کرم‌های کامپیوتر جمعه ساعت ۱۸  دربارهٔ وضعیت وبلاگ و استفاده از ایستاسازها گفت و کوی اعضای کرم‌های کامپیوتر"/>
     <meta property="og:url" content="https://meet.pcworms.ir" />
     <meta property="og:image" content="./preview.png" />
     <title>دورهمی‌های کرم‌های کامپیوتر</title>
@@ -17,6 +17,64 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@700&family=Vazirmatn:wght@400;700&display=swap"
         rel="stylesheet">
+    <script>
+        var countDownDate = new Date("Apr 04 2025 18:00:00").getTime();
+        var finishDate = countDownDate + (1.5 * 3600 * 1000);
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            if (now > finishDate) {
+                document.getElementById("counter").innerHTML = "❌ خاتمه یافت";
+                document.getElementById("link").innerHTML = "لینک جلسه هم در گروه های ما در تلگرام و ماتریکس اعلام شده بود!";
+            } else if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("counter").innerHTML = "در حال برگزاری ...";
+                document.getElementById("link").innerHTML = "لینک جلسه در گروه های ما در تلگرام و ماتریکس اعلام شده";
+            } else {
+                // Time calculations for days, hours, minutes and seconds
+                distance = Math.floor(distance / 1000)
+                var days = Math.floor(distance / (3600 * 24));
+                distance %= 3600 * 24;
+                var res = days > 0 ? days + " روز" : "";
+                if (distance > 0) res += " و ";
+
+                var hours = Math.floor(distance / 3600);
+                distance %= 3600;
+                if (hours > 0) res += hours + " ساعت";
+                if (distance > 0) res += " و ";
+                var minutes = Math.floor(distance / 60);
+                distance %= 60;
+                if (minutes > 0) res += minutes + " دقیقه"
+                if (distance > 0) res += " و "
+                var seconds = distance;
+
+                // Display the result in the element with id="demo"
+                var res = days + " روز";
+                res += days > 0 && hours > 0 ? " و " : ""
+                res += hours > 0 ? hours + " ساعت" : "";
+                res += hours > 0 && minutes > 0 ? " و " : ""
+                res += minutes > 0 ? minutes + " دقیقه" : "";
+                res += minutes > 0 && seconds > 0 ? " و " : ""
+                res += seconds > 0 ? seconds + " ثانیه" : "";
+                res += " دیگر"
+                const regex = /\d/g
+                let nums = '۰۱۲۳۴۵۶۷۸۹';
+                res = res.replace(regex, function (d) {
+                    return nums[d]
+                }
+                )
+                document.getElementById("counter").innerHTML = res;
+            }
+
+
+        }, 1000);
+    </script>
 </head>
 
 <body class="text-light">
@@ -43,7 +101,7 @@
                         </small>
                         <h2 class="subject">وضعیت وبلاگ و استفاده از ایستاسازها</h2>
                         <div class="text-center">
-                            <p>🚫 لغو شد</p>
+                            <small class="time" id="counter"></small>
                         </div>
                     </div>
                 </div>
