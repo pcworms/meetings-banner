@@ -1,11 +1,11 @@
 {
   "cancelled": true,
-  "date": "Mar 14 2025 19:00:00",
-  "time_except": "ساعت ۷",
-  "count": 49,
-  "speaker": null,
+  "date": "Apr 04 2025 18:00:00",
+  "time_except": null,
+  "count": 50,
+  "speaker": "اعضای کرم‌های کامپیوتر",
   "profile": "assets/avatars/pcworms.png",
-  "subject": "بحث آزاد",
+  "subject": "وضعیت وبلاگ و استفاده از ایستاسازها",
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
@@ -13,7 +13,7 @@
     "every_week": "هر هفته",
     "cancelled": "🚫 لغو شد",
     "just_this_week": "فقط این هفته",
-    "presented_by": "با ارائهٔ",
+    "presented_by": "گفت‌وگوی",
     "about": "دربارهٔ"
   }
 }
