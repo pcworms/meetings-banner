@@ -1,11 +1,11 @@
 {
   "cancelled": false,
-  "date": "Apr 11 2025 18:00:00",
+  "date": "Apr 18 2025 18:00:00",
   "time_except": null,
-  "count": 51,
-  "speaker": "اعضای کرم‌های کامپیوتر",
-  "profile": "assets/avatars/pcworms.png",
-  "subject": "چندتا ترفند و تکنیک از پایتون و وب‌سایت ایستا",
+  "count": 52,
+  "speaker": "فاروق کریمی‌زاده",
+  "profile": "assets/avatars/farooqkz.png",
+  "subject": "درس‌های توسعه یک پروژهٔ طولانی مدت",
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
