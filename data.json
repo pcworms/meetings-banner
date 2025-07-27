@@ -1,11 +1,11 @@
 {
   "cancelled": false,
-  "date": "June 13 2025 18:00:00",
+  "date": "April 1 2025 18:00:00",
   "time_except": null,
-  "count": 56,
+  "count": 57,
   "speaker": "بهنام سیم‌جو",
   "profile": "assets/avatars/bsimjoo.png",
-  "subject": "بررسی و استفاده از ماژول textual (رابط گرافیکی در خط فرمان)",
+  "subject": "هوش مصنوعی جای برنامه‌نویس ها رو می‌گیره؟!",
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
