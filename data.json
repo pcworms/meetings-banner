@@ -1,11 +1,12 @@
 {
   "cancelled": false,
-  "date": "Oct 24 2025 18:00:00",
+  "finished": false,
+  "date": "Jul 03 2026 18:00:00",
   "time_except": null,
-  "count": 61,
+  "count": 62,
   "speaker": "بهنام سیم‌جو",
   "profile": "assets/avatars/bsimjoo.png",
-  "subject": "بحث آزاد",
+  "subject": null,
   "fa": {
     "meeting": "دورهمی",
     "pcworms": "کرم‌های کامپیوتر",
