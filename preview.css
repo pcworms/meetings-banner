@@ -1,124 +1,294 @@
-/* preview.css — overrides for 1024×1024 social media image */
-
-html, body {
-    width: 1024px;
-    height: 1024px;
-    min-height: 1024px;
-    max-height: 1024px;
-    overflow: hidden;
+*, *::before, *::after {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-size: 40px 40px;
 }
 
+html {
+    width: 100%;
+    font-size: 16px;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+    direction: rtl;
+    background-color: #000d12;
+    background-image: radial-gradient(rgba(0, 81, 96, 0.2) 1px, transparent 1px);
+    background-size: 28px 28px;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+}
+
+/* ── Layout ── */
 .page-center {
-    width: 880px;
-    max-width: 880px;
+    width: 100%;
+    max-width: 560px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 0;
 }
 
-/* ── Header row: logo above number, both large and centered ── */
+/* ── Header ── */
 .site-header {
-    flex-direction: column;
-    gap: 16px;
-    margin-bottom: 28px;
+    display: flex;
     align-items: center;
     justify-content: center;
+    gap: 16px;
+    margin-bottom: 10px;
 }
 
 .site-logo {
-    width: 220px;
-    height: 220px;
-    order: -1;
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
 }
 
 .session-number {
-    font-size: 220px;
-    letter-spacing: -6px;
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: clamp(72px, 18vw, 100px);
+    font-weight: 700;
     line-height: 1;
-    text-align: center;
+    color: white;
+    letter-spacing: -2px;
 }
 
-/* ── Title ── */
+/* ── Title block ── */
 .site-title {
-    font-size: 48px;
-    margin-bottom: 36px;
+    font-size: clamp(18px, 5vw, 24px);
+    font-weight: 700;
     text-align: center;
-    line-height: 1.3;
+    color: white;
+    margin-bottom: 4px;
 }
 
-/* ── Free badge ── */
-.free-badge {
-    font-size: 38px;
-    padding: 22px 56px;
-    border-radius: 16px;
-    margin-bottom: 36px;
-    width: auto;
+.site-time {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.38);
     text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ── Countdown pill ── */
+.countdown-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 24px;
+    padding: 7px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    transition: background 0.4s, border-color 0.4s, color 0.4s;
+}
+
+.countdown-pill.state-before {
+    background: rgba(10, 180, 80, 0.12);
+    border: 1px solid rgba(10, 180, 80, 0.38);
+    color: #4ddd88;
+}
+
+.countdown-pill.state-live {
+    background: rgba(153, 0, 30, 0.2);
+    border: 1px solid rgba(153, 0, 30, 0.5);
+    color: #ff6b80;
+}
+
+.countdown-pill.state-ended {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.countdown-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.state-before .countdown-dot {
+    background: #2ecc71;
+    animation: pulse-dot 1.8s ease-in-out infinite;
+}
+
+.state-live .countdown-dot {
+    background: #99001e;
+    animation: pulse-dot 0.9s ease-in-out infinite;
+}
+
+.state-ended .countdown-dot {
+    background: rgba(180, 180, 180, 0.4);
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.18; }
+}
+
+/* ── Free discussion badge ── */
+.free-badge {
+    background: rgba(0, 81, 96, 0.28);
+    border: 1px solid rgba(0, 81, 96, 0.6);
+    border-radius: 10px;
+    padding: 10px 28px;
+    font-size: 17px;
+    font-weight: 700;
+    color: rgba(0, 200, 220, 0.9);
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 /* ── Speaker card ── */
 .speaker-card {
-    padding: 32px 40px;
-    border-radius: 22px;
-    gap: 28px;
-    margin-bottom: 36px;
     width: 100%;
+    background: rgba(0, 81, 96, 0.14);
+    border: 1px solid rgba(0, 81, 96, 0.42);
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .speaker-card::before {
-    width: 5px;
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 20%;
+    bottom: 20%;
+    width: 3px;
+    background: #99001e;
+    border-radius: 0 3px 3px 0;
 }
 
 .speaker-profile {
-    width: 110px;
-    height: 110px;
-    border-width: 3px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(153, 0, 30, 0.4);
+    flex-shrink: 0;
+}
+
+.speaker-info {
+    flex: 1;
+    min-width: 0;
 }
 
 .speaker-label {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 11px;
+    color: rgba(0, 170, 204, 0.8);
+    margin-bottom: 4px;
+    letter-spacing: 0.03em;
 }
 
 .speaker-subject {
-    font-size: 38px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+    line-height: 1.3;
 }
 
 .speaker-name {
-    font-size: 24px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.48);
 }
 
-/* ── Time ── */
-.site-time {
-    font-size: 26px;
-    margin-bottom: 0;
-    text-align: center;
+/* ── Divider ── */
+.divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 81, 96, 0.5), transparent);
+    margin-bottom: 16px;
 }
 
-/* ── Hide elements not needed in preview ── */
-.countdown-pill,
-.divider,
+/* ── Telegram link ── */
 .tg-link {
-    display: none !important;
+    display: block;
+    width: 100%;
+    padding: 11px 16px;
+    border: 1px solid rgba(0, 81, 96, 0.28);
+    border-radius: 8px;
+    text-align: center;
+    font-size: 13px;
+    color: rgba(29, 155, 240, 0.8);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
 }
 
-/* ── Cancelled overlay (position:fixed won't work in pageres, use absolute) ── */
+.tg-link:hover {
+    border-color: rgba(29, 155, 240, 0.4);
+    color: rgba(29, 155, 240, 1);
+}
+
+/* ── Cancelled overlay ── */
 .cancelled-overlay {
-    position: absolute;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(4px) grayscale(60%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
 }
 
 .cancelled-badge {
-    font-size: 56px;
-    padding: 26px 76px;
-    border-radius: 22px;
+    background: #99001e;
+    color: white;
+    font-size: 26px;
+    font-weight: 900;
+    padding: 16px 44px;
+    border-radius: 14px;
+    transform: rotate(-5deg);
+    letter-spacing: 0.06em;
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+/* ── Time exception notice ── */
+.time-notice {
+    font-size: 12px;
+    color: rgba(255, 200, 50, 0.75);
+    text-align: center;
+    margin-bottom: 18px;
+    padding: 7px 14px;
+    border: 1px solid rgba(255, 200, 50, 0.2);
+    border-radius: 6px;
+    width: 100%;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+    body {
+        padding: 16px 12px;
+        background-size: 22px 22px;
+    }
+
+    .site-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .speaker-card {
+        padding: 14px 16px;
+    }
+
+    .free-badge {
+        font-size: 15px;
+        padding: 9px 20px;
+    }
 }
