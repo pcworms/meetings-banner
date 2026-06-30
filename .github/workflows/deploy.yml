@@ -31,7 +31,7 @@ jobs:
           npm install --global puppeteer
           npm install --global pageres-cli
       - name: create social media preview
-        run: "pageres template/preview.html 1024x1024 --filename='template/preview' --overwrite"
+        run: "pageres template/preview.html 1024x1024 --delay=2 --filename='template/preview' --overwrite"
       - name: copy data json to publish
         run: cp data.json template/data.json
       - name: Read data
