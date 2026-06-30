@@ -1,52 +1,124 @@
+/* preview.css — overrides for 1024×1024 social media image */
+
 html, body {
-    height: 1024px;
     width: 1024px;
+    height: 1024px;
+    min-height: 1024px;
+    max-height: 1024px;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex !important;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 60px;
+    background-size: 40px 40px;
 }
 
 .page-center {
-    max-width: 100%;
+    width: 880px;
+    max-width: 880px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+/* ── Header row: logo above number, both large and centered ── */
+.site-header {
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+    align-items: center;
+    justify-content: center;
 }
 
 .site-logo {
-    width: 100px;
-    height: 100px;
+    width: 220px;
+    height: 220px;
+    order: -1;
 }
 
 .session-number {
-    font-size: 120px;
+    font-size: 220px;
+    letter-spacing: -6px;
+    line-height: 1;
+    text-align: center;
 }
 
+/* ── Title ── */
 .site-title {
-    font-size: 28px;
+    font-size: 48px;
+    margin-bottom: 36px;
+    text-align: center;
+    line-height: 1.3;
 }
 
+/* ── Free badge ── */
 .free-badge {
-    font-size: 22px;
-    padding: 14px 36px;
+    font-size: 38px;
+    padding: 22px 56px;
+    border-radius: 16px;
+    margin-bottom: 36px;
+    width: auto;
+    text-align: center;
 }
 
-.speaker-subject {
-    font-size: 24px;
+/* ── Speaker card ── */
+.speaker-card {
+    padding: 32px 40px;
+    border-radius: 22px;
+    gap: 28px;
+    margin-bottom: 36px;
+    width: 100%;
 }
 
-.speaker-name {
-    font-size: 16px;
+.speaker-card::before {
+    width: 5px;
 }
 
 .speaker-profile {
-    width: 72px;
-    height: 72px;
+    width: 110px;
+    height: 110px;
+    border-width: 3px;
 }
 
+.speaker-label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.speaker-subject {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.speaker-name {
+    font-size: 24px;
+}
+
+/* ── Time ── */
+.site-time {
+    font-size: 26px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+/* ── Hide elements not needed in preview ── */
+.countdown-pill,
+.divider,
+.tg-link {
+    display: none !important;
+}
+
+/* ── Cancelled overlay (position:fixed won't work in pageres, use absolute) ── */
 .cancelled-overlay {
     position: absolute;
 }
 
 .cancelled-badge {
-    font-size: 36px;
-    padding: 20px 60px;
+    font-size: 56px;
+    padding: 26px 76px;
+    border-radius: 22px;
 }
