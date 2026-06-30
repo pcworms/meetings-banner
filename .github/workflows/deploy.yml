@@ -31,7 +31,7 @@ jobs:
           npm install --global puppeteer
           npm install --global capture-website-cli
       - name: create social media preview
-        run: "capture-website template/preview.html --width=1024 --height=1024 --delay=10 --filename='template/preview.png'"
+        run: "capture-website template/preview.html --width=1024 --height=1024 --delay=10 --output='template/preview.png'"
       - name: copy data json to publish
         run: cp data.json template/data.json
       - name: Read data
