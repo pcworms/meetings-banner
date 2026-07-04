@@ -1,9 +1,9 @@
 {
   "cancelled": false,
-  "finished": true,
-  "date": "Jul 03 2026 18:00:00",
+  "finished": false,
+  "date": "Jul 10 2026 18:00:00",
   "time_except": null,
-  "count": 62,
+  "count": 63,
   "speaker": "بهنام سیم‌جو",
   "profile": "assets/avatars/bsimjoo.png",
   "subject": null,
