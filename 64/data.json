@@ -1,6 +1,6 @@
 {
   "cancelled": false,
-  "finished": false,
+  "finished": true,
   "date": "Jul 17 2026 18:00:00",
   "time_except": null,
   "count": 64,
