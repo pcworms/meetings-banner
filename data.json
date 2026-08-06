@@ -1,12 +1,12 @@
 {
   "cancelled": false,
-  "finished": true,
+  "finished": false,
   "date": "Jul 31 2026 18:00:00",
   "time_except": null,
   "count": 65,
   "speaker": "بهنام سیم‌جو",
-  "profile": "assets/avatars/bsimjoo.png",
-  "subject": null,
+  "profile": "assets/avatars/homayun.jpg",
+  "subject": "سبک زندگی کامپیوتری!",
   "link": "https://engage.shatel.com/gl/rooms/jhi-85w-nb5-lnn/join",
   "fa": {
     "meeting": "دورهمی",
