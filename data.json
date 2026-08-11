@@ -1,12 +1,12 @@
 {
   "cancelled": false,
-  "finished": true,
-  "date": "Aug 7 2026 18:00:00",
+  "finished": false,
+  "date": "Aug 14 2026 18:00:00",
   "time_except": null,
-  "count": 66,
-  "speaker": "همایون",
-  "profile": "assets/avatars/homayun.jpg",
-  "subject": "سبک زندگی کامپیوتری!",
+  "count": 67,
+  "speaker": "جعفر",
+  "profile": "assets/avatars/jafar.jpg",
+  "subject": "Modern Standby و S2idle",
   "link": "https://engage.shatel.com/gl/rooms/jhi-85w-nb5-lnn/join/",
   "fa": {
     "meeting": "دورهمی",
