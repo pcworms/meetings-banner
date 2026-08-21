@@ -1,12 +1,12 @@
 {
   "cancelled": false,
-  "finished": true,
-  "date": "Aug 21 2026 18:00:00",
+  "finished": false,
+  "date": "Aug 28 2026 18:00:00",
   "time_except": null,
-  "count": 68,
-  "speaker": "بهنام سیم‌جو",
-  "profile": "assets/avatars/bsimjoo.png",
-  "subject": "MCP چیه و به چه دردی می‌خوره؟!",
+  "count": 69,
+  "speaker": "امیرحسین پناهی‌فر",
+  "profile": "assets/avatars/AHP.jpg",
+  "subject": "روایت یک مهندس دواپس شدن",
   "link": "https://engage.shatel.com/gl/rooms/jhi-85w-nb5-lnn/join/",
   "fa": {
     "meeting": "دورهمی",
