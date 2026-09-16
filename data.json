@@ -1,12 +1,12 @@
 {
   "cancelled": false,
-  "finished": true,
+  "finished": false,
   "date": "Aug 28 2026 18:00:00",
   "time_except": null,
-  "count": 69,
-  "speaker": "امیرحسین پناهی‌فر",
-  "profile": "assets/avatars/AHP.jpg",
-  "subject": "روایت یک مهندس دواپس شدن",
+  "count": 70,
+  "speaker": null,
+  "profile": null,
+  "subject": null,
   "link": "https://engage.shatel.com/gl/rooms/jhi-85w-nb5-lnn/join/",
   "fa": {
     "meeting": "دورهمی",
